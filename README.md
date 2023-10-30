@@ -1,1 +1,2 @@
 # UUMEventManagementSystem
+* FEATURES *
