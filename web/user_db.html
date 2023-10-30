@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Dashboard - UUM Event Management</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="user-dashboard">
+      <h1>Submit Event Proposal</h1>
+      <form
+        action="submit_event.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <input type="text" name="eventName" placeholder="Event Name" required />
+        <input type="date" name="eventDate" required />
+        <input type="file" name="eventDocument" accept=".pdf" required />
+        <input type="submit" value="Submit Proposal" />
+      </form>
+    </div>
+  </body>
+</html>

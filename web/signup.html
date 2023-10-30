@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+
+  <body>
+    <div class="contact-container">
+      <div class="right">
+        <h1 class="title">Create a New Account</h1>
+        <img class="logo" src="images/logo1.png" alt="" />
+        <div class="form-container">
+          <div class="form-group">
+            <label for="firstName">First name:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First name"
+              id="firstName"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last name:</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Last name"
+              id="lastName"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="example@example.com"
+              id="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              id="confirmPassword"
+              required
+            />
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input
+                type="radio"
+                name="accountType"
+                class="form-check-input"
+                value="admin"
+              />
+              Admin
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input
+                type="radio"
+                name="accountType"
+                class="form-check-input"
+                value="user"
+                checked
+              />
+              User
+            </label>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary btn-block mb-3"
+            onclick="signup()"
+          >
+            Create Account
+          </button>
+          <div class="alert alert-info small" role="alert">
+            By clicking above, you agree to our
+            <a href="#" class="alert-link">Terms &amp; Conditions</a> and our
+            <a href="#" class="alert-link">Privacy Policy</a>.
+          </div>
+          <div class="text-center">
+            <p>or ...</p>
+            <a href="#" class="btn btn-success">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function validateForm() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match");
+          return false;
+        }
+
+        return true;
+      }
+
+      function signup() {
+        var firstName = document.getElementById("firstName").value;
+        var lastName = document.getElementById("lastName").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var accountType = document.querySelector(
+          'input[name="accountType"]:checked'
+        ).value;
+
+        // You can send the form data to your server for user registration.
+        // Example: You can use JavaScript's Fetch API or an XMLHttpRequest to send this data to your server.
+
+        // For testing purposes, you can log the values to the console:
+        console.log("First Name: " + firstName);
+        console.log("Last Name: " + lastName);
+        console.log("Email: " + email);
+        console.log("Password: " + password);
+        console.log("Account Type: " + accountType);
+      }
+    </script>
+  </body>
+</html>
