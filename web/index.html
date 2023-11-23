@@ -1,22 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>UUM Event Management</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>UUM EVENT APPROVAL MANAGEMENT</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="login-container">
-      <h1>Login</h1>
-      <form action="login.php" method="post">
-        <input type="text" name="username" placeholder="Username" required />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-        />
-        <input type="submit" value="Login" />
-      </form>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="section">
+      <div class="container">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <h6 class="mb-0 pb-3">
+                <span>Log In </span><span>Sign Up</span>
+              </h6>
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="reg-log"
+                name="reg-log"
+              />
+              <label for="reg-log"></label>
+              <div class="card-3d-wrap mx-auto">
+                <div class="card-3d-wrapper">
+                  <div class="card-front">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">Log In</h4>
+                        <form action="login.php" method="post">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-style"
+                            placeholder="Email"
+                          />
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="password"
+                            class="form-style"
+                            placeholder="Password"
+                          />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <div class="form-group">
+                          <label>
+                            <input type="radio" name="user_type" value="regular" checked />
+                            Regular User
+                          </label>
+                          <label>
+                            <input type="radio" name="user_type" value="admin" />
+                            Admin
+                          </label>
+                        </div>
+                        <a href="#" class="btn mt-4" onclick="login()">Login</a>
+                        <p id="error-message" class="text-danger" style="display: none">Sorry, your email/password is incorrect. Please try again.</p>
+                        <script>
+                          function login() {
+                            var userType = document.querySelector('input[name="user_type"]:checked').value;
+                            if (userType === 'admin') {
+                              window.location.href = 'admin_db.html'; // Redirect to admin page
+                            } else {
+                              window.location.href = 'user_db.html'; // Redirect to user page
+                            }
+                          }
+                        </script>                        
+                        <p class="mb-0 mt-4 text-center">
+                          <a href="reset_pass.html" class="link"
+                            >Forgot your password?</a
+                          >
+                        </p>
+                      </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-3 pb-3">Sign Up</h4>
+                        <form action="register.php" method="post">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-style"
+                            placeholder="Full Name"
+                          />
+                          <i class="input-icon uil uil-user"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="tel"
+                            class="form-style"
+                            placeholder="Phone Number"
+                          />
+                          <i class="input-icon uil uil-phone"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="email"
+                            class="form-style"
+                            placeholder="Email"
+                          />
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input
+                            type="password"
+                            class="form-style"
+                            placeholder="Password"
+                          />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <div class="form-group">
+                          <label
+                            ><input
+                              type="radio"
+                              name="user_type_signup"
+                              value="regular"
+                              checked
+                            />
+                            Regular User</label
+                          >
+                          <label
+                            ><input
+                              type="radio"
+                              name="user_type_signup"
+                              value="admin"
+                            />
+                            Admin</label
+                          >
+                        </div>
+                        <div
+                          class="form-group"
+                          id="admin-department"
+                          style="display: none"
+                        >
+                          <select class="form-style">
+                            <option value="">Select Department</option>
+                            <option value="hr">HR</option>
+                            <option value="it">IT</option>
+                            <option value="finance">Finance</option>
+                            <!-- Add more departments as needed -->
+                          </select>
+                          <i class="input-icon uil uil-building"></i>
+                        </div>
+                        <a href="index.html" class="btn mt-4"
+                          >Register</a
+                        >
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script>
+      document
+        .querySelectorAll('input[name="user_type_signup"]')
+        .forEach((input) => {
+          input.addEventListener("change", function () {
+            document.getElementById("admin-department").style.display =
+              this.value === "admin" ? "block" : "none";
+          });
+        });
+    </script>
+    <script>
+      function login() {
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          var userType = document.querySelector('input[name="user_type"]:checked').value;
+  
+          // Perform login validation here (check email and password)
+          // For demonstration purposes, I'm using a simple check here
+          if (email === "user@example.com" && password === "password" && userType === "regular") {
+              window.location.href = 'user_db.html'; // Redirect to user page
+          } else if (email === "admin@example.com" && password === "adminpassword" && userType === "admin") {
+              window.location.href = 'admin_db.html'; // Redirect to admin page
+          } else {
+              // Show error message
+              document.getElementById("error-message").style.display = "block";
+          }
+      }
+  </script>
   </body>
 </html>

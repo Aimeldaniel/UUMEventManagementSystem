@@ -123,3 +123,33 @@ button {
     left: calc(68% - 500px / 2);
   }
 }
+
+.role {
+  margin-top: 20px;
+}
+
+.user-role {
+  width: 280%;
+  padding: 20px 10px 20px 5px;
+  border: 1px solid #ccc;
+  width: 280px;
+  height: 45px;
+  margin: 15px;
+  border-radius: 25px;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Scheherazade New", serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.user-role:focus {
+  border-color: #007bff;
+}
+
+.keepme {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Additional styles if needed */
