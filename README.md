@@ -28,12 +28,4 @@
      - WRITE PROGRAMME FEEDBACK
        - UPLOAD PIC
 
-tumpang
-|Photo | Matric Number | Name | Phone Number |
-| -----| --------------|------| ------------ |
-|![new1](https://github.com/Aimeldaniel/UUMEventManagementSystem/assets/92418576/04551786-48f6-4066-b254-213bf0e3e6e7)| 287056 |Muhamad Aimil Daniel Bin Latif  | +60 11-11694587 |
-|      | 2885532       |Nur Adlina Kamilia Binti Azhari      | +60 111-63524626      | 
-|      | 288333     |Nur Azanin Binti Hamzah      | +60 11-64293627        |
-|      | 289506  |Neisya Syamimie Binti Khairul Salleh | +60 11-20831679 |
-|      | 287968  |Nur Iznie Maisyarah Binti Selleh | +60 11-27443087 |
-|      | 289478   |Nur Hana Zulaikha Binti Rafisam | +60 17-4045360 |
+
