@@ -30,7 +30,8 @@
 
 |Photo | Matric Number | Name | Phone Number |
 | -----| --------------|------| ------------ |
-|      | 287056        |Muhamad Aimil Daniel Bin Latif      | +60 11-11694587   |
+|  ![photo_2022-11-24_01-40-01](https://github.com/Aimeldaniel/UUMEventManagementSystem/assets/92418576/c9f5ff6b-69a6-4b73-a5f6-3f563f242aaa)
+    | 287056        |Muhamad Aimil Daniel Bin Latif      | +60 11-11694587   |
 |      | 2885532       |Nur Adlina Kamilia Binti Azhari      | +60 111-63524626      | 
 |      | 288333     |Nur Azanin Binti Hamzah      | +60 11-64293627        |
 |      | 289506  |Neisya Syamimie Binti Khairul Salleh | +60 11-20831679 |
